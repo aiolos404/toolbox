@@ -1,0 +1,40 @@
+<!--
+A dropDownMenu code which can keep current status that would not changed by reload or go back
+Author:aiolos404
+Date:12:15 PM 2/12/2014
+-->
+
+
+<script type="text/JavaScript">  
+
+function toggle(d) 
+{ 
+	var o = document.getElementById(d); 
+	if (o.style.display == 'none') {
+		o.style.display = 'block';
+	} else { 
+		o.style.display = 'none';
+	};
+	' location.hash = o.style.display;
+}
+
+window.onload=function(){
+	var str = location.hash;
+	var res = str.replace("#","");
+	if(res == "block"){document.getElementById('archive').style.display='block'}
+	else{document.getElementById('archive').style.display='none'};
+}
+
+</script>
+<a href="javascript:;" onClick="toggle('archive');"><b><font size="3">Show Archive</font></b></a>
+<div id="archive" style="display:none;">
+<table>
+
+
+<a href="">1999</a></br>
+<a href="">2000</a></br>
+<a href="">2000</a></br>
+<a href="">2000</a></br>
+<a href="">2001</a>
+</table>
+</div>
